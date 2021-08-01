@@ -1,4 +1,4 @@
-import { addPointerToMap } from '../module/geolocation.js'
+import { addPointerToMap } from '../module/map.js'
 
 const buttonSearchGeolocation = document.getElementById('searchGeolocation');
 const coordinateInput = document.getElementById('coordinateInput');
