@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;600;700&display=swap');
 
 
 .neutral-500{
@@ -11,6 +11,12 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
+}
+
+.neutral-700{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
 }
 
 .font-bold {
@@ -29,6 +35,9 @@
 }
 .green{
     color: #006611;
+}
+.font-16{
+    font-size:16px;
 }
 .font-15{
     font-size:15px;
