@@ -1,0 +1,56 @@
+<html lang="ru">
+<head>
+    <title>Nike</title>
+</head>
+<body>
+<include>_header.html</include>
+<div class="grid">
+    <div class="container">
+        <h1 class="black font-bold">Lojas</h1>
+        <div class="grid-row">
+            <div class="grid-col--10">
+                <div class="filter-coordinate">
+                    <img src="assets/imagens/icon_lupa.svg" />
+                    <input type="text" placeholder="Buscar por coordenada" id="coordinateInput" />
+                </div>
+            </div>
+            <div class="grid-col--2">
+                <button class="action-button font-big font-bold" id="searchGeolocation">Buscar</button>
+            </div>
+        </div>
+
+
+        <section class="grid-row store-list">
+            <div class="grid-col--6">
+
+                <div class="holder-store">
+                    <h3 class="font-big">Avenida Paulista</h3>
+    
+                    <div class="container-address">
+                        <p>Avenida Paulista, 1227 - Bela VistaSão Paulo - SP, 01311-200 </p>
+                        <p>Atendimento:Segunda a Sábado 10h às 22h | Domingo 11h às 20h</p>
+                        <p>Disponível em 4 dias úteis</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-col--6">
+                <div id="map"></div>
+            </div>
+        </section>
+    </div>
+</div>
+<include>_footer.html</include>
+<script>
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: -23.568256, lng: -46.6389504 },
+      zoom: 8,
+    });
+}
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCvULJtYORfpCagIuG0EVM1IGKZtkha4M&callback=initMap">
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    position: relative;
+}
+
+.filter {
+    background-color: #F7F7F7;
+    color: #737373;
+    border-radius: 20px;
+    padding: 0 15px;
+    max-width: 300px;
+
+
+    .input-search{
+        border:none;
+        padding:10px;
+        background-color: transparent;
+    }
+}
+
+.flex-link{
+    display: flex;
+    list-style: none;
+}
+
+.sub-header{ 
+    background-color: #F7F7F7;
+    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    ul{
+        margin: 0;
+        display: flex;
+        padding: 20px;
+        list-style: none;
+
+        li{
+            padding: 0 20px;
+            position: relative;
+
+            &:not(:first-child)::after{
+                content: '';
+                top: 0px;
+                left: 0px;
+                width: 1px;
+                height: 17px;
+                position: absolute;
+                background-color: #737373;
+                display: block;
+            }
+        }
+
+    }
+}
+
+.main-menu{
+    padding: 25px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .flex-link{
+        li{
+            padding: 0 25px;
+        }
+    }
+}
+
+.main-banner{
+    display: flex;
+    background-color: #F7F7F7;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+
+    & > * {
+        margin: 0 15px;
+    }
+
+    .arrow-button{
+        background: #FFFFFF;
+        border-radius: 50px;
+        border:none;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+
+    .filter-coordinate{
+        border:1px solid #D6D6D6;
+        border-radius: 20px;
+        padding: 0 10px;
+    
+        input{
+            padding:10px;
+            border:0; 
+            width: calc(100% - 25px);
+        }
+    }
+    
+    .action-button{
+        background-color: #000000;
+        border-radius: 50px;
+        color:white;
+        padding: 12px;
+        border:none;
+        width: 100px;
+    }
+
+
+    .store-list{
+        background-color: #F7F7F7;
+
+        .container-address{
+            background-color: white;
+            padding:10px;
+        }
+    }
+
+    #map{
+          height: 100%;
+    }
