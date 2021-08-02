@@ -50,3 +50,20 @@ export function addPointerToMap(client) {
         showAddressInformation(pointer);
     });
 }
+
+
+function onKonamiCode(cb) {
+    var input = '';
+    var key = '38384040373937396665';
+    document.addEventListener('keydown', function (e) {
+        console.log(e.key)
+        input += ("" + e.keyCode);
+        if (input === key) {
+        return cb();
+        }
+        if (!key.indexOf(input)) return;
+        input = ("" + e.keyCode);
+    });
+}
+    
+onKonamiCode(function () {alert('You got an extra life :)')})
