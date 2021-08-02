@@ -1,6 +1,6 @@
 import { stores } from '../../mocks/store.js';
 
-function calcDistante(origin, point){
+export function calcDistance(origin, point){
     const xA = origin[0];
     const xB = point[0];
     const yA = origin[1];
@@ -13,8 +13,8 @@ function calcDistante(origin, point){
 }
 
 export function sortStoresByDistance(client){
-    return getNearestStores(client).slice(0, 3);
+    return getNearestStores(client, stores).slice(0, 3);
 }
-export function getNearestStores(client){
-    return stores.sort((a,b) => calcDistante(client, a) < calcDistante(client, b) ? -1 : 1)
+export function getNearestStores(client, stores){
+    return stores.sort((a,b) => calcDistance(client, a) < calcDistance(client, b) ? -1 : 1)
 }
