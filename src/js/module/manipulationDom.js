@@ -7,7 +7,6 @@ const mapAndListContainer = document.getElementById("mapAndListContainer");
 buttonSearchGeolocation.addEventListener("click", () => {
   clearList();
   const coordinate = [...coordinateInput.value.split(",")];
-  console.log(-23.5421282, -46.6971003);
   addPointerToMap(coordinate);
   mapAndListContainer.classList.remove("none");
 });
