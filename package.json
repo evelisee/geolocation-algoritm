@@ -8,6 +8,7 @@
         "start-yarn": "node ./webpack/server.js --yarn",
         "build": "webpack --config ./webpack/config.prod.babel.js --mode production --env.production",
         "eslint": "eslint src/**/*.js",
+        "test": "jest --coverage",
         "eslint-fix": "eslint src/**/*.js --fix"
     },
     "repository": "https://github.com/evelisee/geolocation-algoritm.git",
