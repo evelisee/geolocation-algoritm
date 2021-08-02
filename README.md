@@ -6,6 +6,7 @@ Project developed for Nike's geolocation solution with vanilla javascript.
 - The font used was Roboto instead of the Helvetica family because it contains paid copyright.
 - Consumed a list of stores with addresses in a fixed mock code. The locations are real from nike stores (taken from the official website).
 - If you do not have a coordinate in mind, use: `-23.5421331,-46.6971003`
+- There is an easterEgg in the project.
 
 
 ## Start
