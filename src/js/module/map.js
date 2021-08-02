@@ -1,10 +1,10 @@
 import { mockStoresNike } from '../../mocks/store';
 import { sortStoresByDistance } from './geolocation';
 
-export let markersArray = [];
+export const markersArray = [];
 
 export function addMarker(location) {
-    const image = "https://images.lojanike.com.br/landingpage/ni/938/1/assets/img/square-pin-preto.svg";
+    const image = 'https://images.lojanike.com.br/landingpage/ni/938/1/assets/img/square-pin-preto.svg';
     const marker = new google.maps.Marker({
         position: location,
         map: map,
@@ -14,9 +14,8 @@ export function addMarker(location) {
 }
 
 export function showAddressInformation(coordinate) {
-    const store = mockStoresNike.find((store) => store.coordinates[0] === coordinate[0] &&
-        store.coordinates[1] === coordinate[1]
-    );
+    const store = mockStoresNike.find((storeData) =>
+        storeData.coordinates[0] === coordinate[0] && storeData.coordinates[1] === coordinate[1]);
     const storeInformationBlock = `<div class="block-store">
                 <h3 class="neutral-500 font-24">${store.name}</h3>
 
@@ -31,13 +30,13 @@ export function showAddressInformation(coordinate) {
                 </div>
             </div>`;
 
-    document.getElementById("storeInformationList").innerHTML += storeInformationBlock;
+    document.getElementById('storeInformationList').innerHTML += storeInformationBlock;
 }
 
 export function deleteOverlays() {
     if (markersArray) {
-        for (let i in markersArray) {
-        markersArray[i].setMap(null);
+        for (const i in markersArray) {
+            markersArray[i].setMap(null);
         }
         markersArray.length = 0;
     }
@@ -51,19 +50,17 @@ export function addPointerToMap(client) {
     });
 }
 
-
 function onKonamiCode(cb) {
-    var input = '';
-    var key = '38384040373937396665';
+    let input = '';
+    const key = '38384040373937396665';
     document.addEventListener('keydown', function (e) {
-        console.log(e.key)
-        input += ("" + e.keyCode);
+        input += (`${e.keyCode}`);
         if (input === key) {
-        return cb();
+            return cb();
         }
-        if (!key.indexOf(input)) return;
-        input = ("" + e.keyCode);
+        if (!key.indexOf(input)) return null;
+        input = (`${e.keyCode}`);
     });
 }
-    
-onKonamiCode(function () {alert('You got an extra life :)')})
+
+onKonamiCode(function () { alert('You got an extra life :)'); });
