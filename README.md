@@ -1,5 +1,8 @@
 # Webpack Geolocation with SASS(SCSS), HTML modules, Babel
 
+![image](https://user-images.githubusercontent.com/78181638/127932489-5d5bb1d5-2dae-46e5-a3e6-3a2ca4aa1614.png)
+
+
 Project developed for Nike's geolocation solution with vanilla javascript.
 
 - The responsive is not faithful.
