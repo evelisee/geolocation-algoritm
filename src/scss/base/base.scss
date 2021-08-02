@@ -11,6 +11,9 @@ body {
 .none {
     display: none;
 }
+.grid {
+    padding: 10px;
+}
 .filter {
     background-color: #F7F7F7;
     color: #737373;
@@ -69,7 +72,15 @@ body {
     justify-content: space-between;
     align-items: center;
 
+    .hidden-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
     .flex-link{
+
         li{
             padding: 0 25px;
         }
@@ -104,51 +115,51 @@ body {
 
 
 
-    .filter-coordinate{
-        border:1px solid #D6D6D6;
-        border-radius: 20px;
-        padding: 0 10px;
-    
-        input{
-            padding:10px;
-            border:0; 
-            width: calc(100% - 25px);
-        }
+.filter-coordinate{
+    border:1px solid #D6D6D6;
+    border-radius: 20px;
+    padding: 0 10px;
+
+    input{
+        padding:10px;
+        border:0; 
+        width: calc(100% - 25px);
     }
-    
-    .action-button{
-        background-color: #000000;
-        border-radius: 50px;
-        color:white;
-        padding: 12px;
-        border:none;
-        width: 100px;
-    }
+}
+
+.action-button{
+    background-color: #000000;
+    border-radius: 50px;
+    color:white;
+    padding: 12px;
+    border:none;
+    width: 100px;
+}
 
 
-    .store-list{
-        background-color: #F7F7F7;
+.store-list{
+    background-color: #F7F7F7;
+    height: 500px;
+
+    h3{
+        margin: 10px 0;
+    }
+
+    .overflow{
+        overflow: scroll;
+        padding: 20px;
         height: 500px;
-
-        h3{
-            margin: 10px 0;
-        }
-
-        .overflow{
-            overflow: scroll;
-            padding: 20px;
-            height: 500px;
-        }
-
-        .container-address{
-            background-color: white;
-            padding:25px;
-        }
     }
 
-    #map{
-        height: 100%;
+    .container-address{
+        background-color: white;
+        padding:25px;
     }
+}
+
+#map{
+    height: 100%;
+}
 
 
 .footer{
@@ -201,3 +212,54 @@ body {
         }
     }
 } 
+
+.burguer-menu {
+    & > * {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+    }
+}
+
+.header{
+    @include media($mediaXS, $mediaLG) {
+        .sub-header{
+            ul {
+                flex-direction: column;
+
+                & > li:after {
+                    content: none;
+                }
+            }
+        }
+        .hidden-menu{
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+
+            img {
+                margin: 0 auto;
+            }
+
+            & > ul{
+                display: inline-block;
+                margin:0;
+                padding:0;
+                width: 100%;
+                text-align: center;
+
+                & > li {
+                    margin: 8px 0;
+                }
+            }
+
+            .filter {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+        }
+        
+    }
+}

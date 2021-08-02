@@ -6,23 +6,23 @@
 <include>_header.html</include>
 <div class="grid">
     <div class="container">
-        <h1 class="black font-bold">Lojas</h1>
+        <h1 class="black neutral-700">Lojas</h1>
         <div class="grid-row">
-            <div class="grid-col--10">
+            <div class="grid-col-xs--12 grid-col--10">
                 <div class="filter-coordinate">
                     <img src="assets/imagens/icon_lupa.svg" />
                     <input type="text" placeholder="Buscar por coordenada" id="coordinateInput" />
                 </div>
             </div>
-            <div class="grid-col--2">
-                <button class="action-button font-big font-bold" id="searchGeolocation">Buscar</button>
+            <div class="grid-col-xs--12 grid-col--2">
+                <button class="action-button font-big neutral-700" id="searchGeolocation">Buscar</button>
             </div>
         </div>
 
 
         <section id="mapAndListContainer" class="grid-row store-list none">
-            <div id="storeInformationList" class="grid-col--6 neutral-500 overflow"></div>
-            <div class="grid-col--6">
+            <div id="storeInformationList" class="grid-col-xs--12 grid-col--6 neutral-500 overflow"></div>
+            <div class="grid-col-xs--12 grid-col--6">
                 <div id="map"></div>
             </div>
         </section>
